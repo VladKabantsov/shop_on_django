@@ -1,12 +1,26 @@
 html, body{
     height: 100%;
     max-height: 100%;
-    font-family: 'Roboto', sans-serif;
-    background-color: #edeef0;
+    font-family: 'Neucha';
+    background: url("../img/bg.jpg");
 }
 
 .navbar{
     margin-bottom: 0;
+}
+
+.navbar-nav li a{
+    font-size: 24px;
+    text-decoration: underline;
+    text-decoration-line: underline;
+    text-decoration-style: initial;
+    text-decoration-color: initial;
+    color: #000;
+}
+
+a:hover {
+    color: #F24941!important;
+    text-decoration: none!important;
 }
 
 .wrapper{
@@ -84,13 +98,14 @@ html, body{
 .navbar-top{
     min-height: 10px;
     height: 20px;
-    background-color: green;
+    /*background-color: green;*/
     border: none;
     border-radius: 0;
 }
 
 .navbar-main{
-    background-color: #55e073;
+    /*background-color: #55e073;*/
+    /*opacity: 0.5;*/
     border: none;
     border-radius: 0;
 }
@@ -101,15 +116,97 @@ html, body{
     padding: 15px 10px;
 }
 
+/*.basket-container:before{*/
+    /*content: '';*/
+    /*background: url("../img/cart-empty.png") no-repeat;*/
+    /*height: 30px;*/
+    /*width: 31px;*/
+/*}*/
+
 .basket-items{
     position: absolute;
     top: 50px;
     width: 100%;
-    background-color: #55e093;
+    /*background-color: #55e093;*/
     z-index: 10;
     padding: 10px;
 }
 
 .form-error{
     color: red;
+}
+
+h1 {
+    font-weight: bold;
+    color: #000000;
+}
+
+.block-present{
+    text-align: center;
+    font-size: 18px;
+    padding-top: 150px;
+
+}
+
+.present {
+    background: url("../img/bg-txt-1.png") no-repeat;
+    background-position-x: 25%;
+    background-position-y: center;
+    width: 100%;
+    padding-top: 150px;
+    color: #000000;
+}
+
+.present:hover{
+    background: url("../img/bg-txt-1-h.png") no-repeat;
+    background-position-x: 25%;
+    background-position-y: center;
+    color: #000000!important;
+}
+
+.symbol {
+    background: url("../img/bg-txt-2.png") no-repeat;
+    background-position-x: 38%;
+    background-position-y: center;
+    width: 100%;
+    padding-top: 150px;
+    color: #000000;
+}
+
+.symbol:hover{
+    background: url("../img/bg-txt-2-h.png") no-repeat;
+    background-position-x: 38%;
+    background-position-y: center;
+    color: #000000!important;
+}
+
+.friend {
+    background: url("../img/bg-txt-3.png") no-repeat;
+    background-position-x: 25%;
+    background-position-y: center;
+    width: 100%;
+    padding-top: 150px;
+    color: #000000;
+}
+
+.friend:hover{
+    background: url("../img/bg-txt-3-h.png") no-repeat;
+    background-position-x: 25%;
+    background-position-y: center;
+    color: #000000!important;
+}
+p {
+    font-size: 18px;
+}
+
+.text-about-shop{
+    background: url("../img/bear-text.png") no-repeat right;
+    /*background-position: right;*/
+}
+
+
+.block-nav{
+    background: url("../img/bear-top.png") no-repeat right bottom;
+    background-position-y: 0px;
+    height: 120px;
 }

@@ -2,7 +2,7 @@ html, body{
     height: 100%;
     max-height: 100%;
     font-family: 'Roboto', sans-serif;
-    background-color: #edeef0;
+    background: url("../img/bg.jpg");
 }
 
 .navbar{
