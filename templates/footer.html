@@ -1,7 +1,25 @@
+{% load static %}
+
+
 <footer class="footer">
     <div class="container">
-        <div class="text">
-            <h3>FOOTER</h3>
+        <div class="row">
+            <div class="col-lg-7">
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav footer_nav">
+                        <li><a href="/">Главная</a></li>
+                        <li><a href="#about">Акции</a></li>
+                        <li><a href="#contact">Каталог</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-3 numbers">
+                <p><img src="{%  static 'img/tel.png' %}" />+38(050)-026-25-87</p>
+                <p><img src="{%  static 'img/tel.png' %}" />+38(096)-554-14-49</p>
+            </div>
+            <div class="col-lg-2">
+                 <img src="{%  static 'img/bear-bottom.png' %}" />
+            </div>
         </div>
     </div>
 </footer>

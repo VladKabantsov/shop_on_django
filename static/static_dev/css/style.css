@@ -204,9 +204,48 @@ p {
     /*background-position: right;*/
 }
 
-
 .block-nav{
     background: url("../img/bear-top.png") no-repeat right bottom;
     background-position-y: 0px;
     height: 120px;
+}
+
+.numbers p{
+    font-size: 24px;
+    font-weight: bold;
+    color: #3399cc;
+}
+
+.numbers p img{
+    margin-right: 25px;
+}
+
+.footer{
+    padding-top: 25px;
+    background: url("../img/bg.jpg");
+}
+
+.footer_nav li a:hover{
+    background: url("../img/bg.jpg");
+}
+
+.girl{
+    background: url("../img/bg-bl1.png") no-repeat;
+    background-position-x: 38%;
+    background-position-y: center;
+}
+
+.number{
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.adjective{
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.noun{
+    font-size: 25px;
+    font-weight: bold;
 }
