@@ -76,7 +76,7 @@ a:hover {
 .discount-container{
     position: absolute;
     top: 30%;
-    background: #55e073;
+    background: #3399cc;
     width: 30%;
     color: white;
     font-weight: 700;
@@ -231,21 +231,72 @@ p {
 
 .girl{
     background: url("../img/bg-bl1.png") no-repeat;
-    background-position-x: 38%;
-    background-position-y: center;
+    height: 150px;
+    width: 150px;
+    display: block;
+    margin: 0 auto;
+    /*margin-bottom: 25px;*/
+    /*margin-top: 25px;*/
+}
+
+.child{
+    background: url("../img/bg-bl2.png") no-repeat;
+}
+.propose{
+    background: url("../img/bg-bl3.png") no-repeat;
+}
+
+.girl:hover{
+    background: url("../img/bg-bl1-h.png") no-repeat;
+}
+
+.child:hover{
+    background: url("../img/bg-bl2-h.png") no-repeat;
+}
+.propose:hover{
+    background: url("../img/bg-bl3-h.png") no-repeat;
 }
 
 .number{
-    font-size: 30px;
+    font-size: 80px;
     font-weight: bold;
+    text-align: right;
 }
 
 .adjective{
-    font-size: 15px;
+    font-size: 25px;
     font-weight: bold;
 }
 
 .noun{
-    font-size: 25px;
+    font-size: 45px;
     font-weight: bold;
+}
+
+.my-btn{
+    background-color: #3399cc;
+    border-color: #3399cc;
+}
+
+.my-btn:hover{
+    transition: 0.5s;
+    background-color: #268bbd;
+    border-color: #3399cc;
+}
+.my-btn:active{
+    transition: 0.5s;
+    background-color: #268bbd;
+    border-color: #3399cc;
+}
+
+.my-btn:focus{
+    transition: 0.5s;
+    background-color: #268bbd;
+    border-color: #3399cc;
+}
+
+.my-btn:visited{
+    transition: 0.5s;
+    background-color: #268bbd;
+    border-color: #3399cc;
 }

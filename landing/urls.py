@@ -19,5 +19,7 @@ from landing import views
 
 urlpatterns = [
     url(r'^$', views.home, name='home'),
+    url(r'^news/', views.news, name='news'),
+    url(r'^catalog/', views.catalog, name='catalog'),
     url(r'^landing123/$', views.landing, name='landing'),
 ]
