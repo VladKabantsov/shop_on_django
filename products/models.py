@@ -31,6 +31,13 @@ class Product(models.Model):
     class Meta:
         verbose_name = 'Товар'
         verbose_name_plural = 'Товары'
+        ordering = ["price", "-price"]
+
+    # def save(self, *args, **kwargs):
+    #     price_currency = self.price
+    #     self.price = price_currency * 25.0
+    #     # return self.price
+    #     super(ProductImage, self).save(*args, **kwargs)
 
 
 class ProductImage(models.Model):
@@ -40,9 +47,16 @@ class ProductImage(models.Model):
     is_active = models.BooleanField(default=True)
     created = models.DateTimeField(auto_now_add=True, auto_now=False)
     updated = models.DateTimeField(auto_now_add=False, auto_now=True)
+    price = models.DecimalField(max_digits=10, decimal_places=2, default=0)
 
     def __str__(self):
         return "%s" % self.id
+
+    # def save(self, *args, **kwargs):
+    #     price = self.product.price
+    #     self.price = price
+    #     # return self.price
+    #     super(ProductImage, self).save(*args, **kwargs)
 
     class Meta:
         verbose_name = 'Фотография'

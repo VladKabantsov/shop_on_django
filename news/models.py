@@ -46,3 +46,6 @@ class NewsImage(models.Model):
     class Meta:
         verbose_name = 'Фотография'
         verbose_name_plural = 'Фотографии'
+#
+# class Currency(models.Model):
+#     currency = models.DecimalField()
