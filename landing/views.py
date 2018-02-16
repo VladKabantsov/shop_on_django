@@ -3,6 +3,7 @@ from .forms import SubscriberForm
 from products.models import *
 from .forms import ToysFilterForm
 
+
 def landing(request):
     name = "CodingMedved"
     current_day = "03.01.2017"
@@ -35,6 +36,9 @@ def news(request):
 def catalog(request):
     products_images = ProductImage.objects.filter(is_active=True, is_main=True, product__is_active=True)
     ProductImage.price = getattr(Product, 'price')
+    # price = ProductImage()
+    # currency_price = price.price_float()
+    # print(currency_price)
     form = ToysFilterForm(request.GET)
     if form.is_valid():
         if form.cleaned_data["min_price"]:

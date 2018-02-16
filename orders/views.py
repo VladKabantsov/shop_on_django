@@ -12,6 +12,8 @@ def basket_adding(request):
     data = request.POST
     product_id = data.get("product_id")
     nmb = data.get("nmb")
+    if (nmb==0):
+        nmb = 1
     is_delete = data.get("is_delete")
 
     if is_delete == 'true':

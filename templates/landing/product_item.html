@@ -12,15 +12,19 @@
             </div>
         {% endif %}
 
-        <h4>{{ product_image.product.name }}</h4>
+        <h4>{{ product_image.product.name|truncatechars_html:2 }}</h4>
         <p>
-            {{ product_image.product.description|truncatechars_html:70 }}
+            {{ product_image.product.description|truncatechars_html:2 }}
         </p>
         <div>
             {{ product_image.price }} UAH
         </div>
         <div class="add-to-card-btn">
-            <button class="btn btn-success my-btn">
+            <button  class="btn btn-success my-btn buy_item_product"
+            data-product_id = "{{ product_image.product.id }}"
+                data-name ="{{ product_image.product.name }}"
+                data-price ="{{ product_image.product.price }}"
+            onclick="Buy_item()">
                 Добавить в корзину
             </button>
         </div>

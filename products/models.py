@@ -16,7 +16,9 @@ class ProductCategory(models.Model):
 class Product(models.Model):
     name = models.CharField(max_length=256, blank=True, null=True, default=None)
     articul = models.CharField(max_length=256, blank=True, null=True, default=None)
+    buy_price = models.DecimalField(max_digits=10, decimal_places=2, default=0)
     price = models.DecimalField(max_digits=10, decimal_places=2, default=0)
+    currency = models.DecimalField(max_digits=10, decimal_places=2, default=0)
     discount = models.IntegerField(default=0)
     category = models.ForeignKey(ProductCategory, blank=True, null=True, default=None, on_delete=models.CASCADE)
     short_description = models.TextField(blank=True, null=True, default=None)
@@ -33,6 +35,11 @@ class Product(models.Model):
         verbose_name_plural = 'Товары'
         ordering = ["price", "-price"]
 
+    def save(self, *args, **kwargs):
+        self.price = float(self.buy_price) * float(self.currency)
+        # return self.price
+        super(Product, self).save(*args, **kwargs)
+
     # def save(self, *args, **kwargs):
     #     price_currency = self.price
     #     self.price = price_currency * 25.0
@@ -42,21 +49,25 @@ class Product(models.Model):
 
 class ProductImage(models.Model):
     product = models.ForeignKey(Product, blank=True, null=True, default=None, on_delete=models.CASCADE)
+    # pizza = models.ForeignKey(ProductCategory, on_delete=models.CASCADE)
     image = models.ImageField(upload_to='products_images/')
     is_main = models.BooleanField(default=False)
     is_active = models.BooleanField(default=True)
     created = models.DateTimeField(auto_now_add=True, auto_now=False)
     updated = models.DateTimeField(auto_now_add=False, auto_now=True)
-    price = models.DecimalField(max_digits=10, decimal_places=2, default=0)
+    price = models.DecimalField(max_digits=10, decimal_places=2, default=1)
 
     def __str__(self):
         return "%s" % self.id
 
-    # def save(self, *args, **kwargs):
-    #     price = self.product.price
-    #     self.price = price
-    #     # return self.price
-    #     super(ProductImage, self).save(*args, **kwargs)
+    def save(self, *args, **kwargs):
+        currency = self.product.currency
+        self.price = float(currency) * float(self.price)
+        # return self.price
+        super(ProductImage, self).save(*args, **kwargs)
+
+    def price_float(self):
+        return float(self.price)
 
     class Meta:
         verbose_name = 'Фотография'
