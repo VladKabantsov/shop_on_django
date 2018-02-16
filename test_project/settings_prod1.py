@@ -5,9 +5,9 @@ ALLOWED_HOSTS = ['*']
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'db1',
-        'USER': 'django_shop',
-        'PASSWORD': 'django_shop_test',
+        'NAME': 'db_toys',
+        'USER': 'admin',
+        'PASSWORD': 'admin',
         'HOST': 'localhost',
         'PORT': '',                      # Set to empty string for default.
     }
